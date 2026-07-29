@@ -20,7 +20,7 @@
     --border2:   #263450;
     --text1:     #f1f5f9;
     --text2:     #94a3b8;
-    --text3:     #4b5d78;
+    --text3:     #7a90b0;
     --green:     #34d399;
     --green-bg:  rgba(52,211,153,0.08);
     --red:       #f87171;
@@ -480,12 +480,12 @@ function renderMonth(i) {
       <div class="kpi-card">
         <div class="kpi-label">Gross Margin</div>
         <div class="kpi-value c-green">${fmt(d.grossMargin)}</div>
-        <div class="kpi-meta"><span class="badge badge-green">${fmtPct(d.grossMarginPct)} of net</span></div>
+        <div class="kpi-meta"><span class="badge badge-green">${d.grossMarginPct ? d.grossMarginPct.toFixed(1) + '%' : '—'} of net</span></div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">CM1</div>
         <div class="kpi-value c-green">${fmt(d.cm1)}</div>
-        <div class="kpi-meta"><span class="badge badge-green">${fmtPct(d.cm1Pct)} of net</span></div>
+        <div class="kpi-meta"><span class="badge badge-green">${d.cm1Pct ? d.cm1Pct.toFixed(1) + '%' : '—'} of net</span></div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">CM2</div>
